@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+</head>
+<body>
+    <h1>Hello from Ian</h1>
+    <form action="/" method="post">
+        <input type="text" name="message">
+        <input type="submit">
+    </form>
+    {% if message %}
+    <h2>Your message is this: {{ message }}</h2>
+    {% endif%}
+</body>
+</html>
