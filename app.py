@@ -6,7 +6,6 @@ app = Flask(__name__)
 def index():
     message = None
     if request.method == 'POST':
-        ## I want to get all the items that have been posted. 
         message = request.form.get('message')
     return render_template('index.html', message=message)
 
